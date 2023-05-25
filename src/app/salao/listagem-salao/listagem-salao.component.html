@@ -1,0 +1,22 @@
+<div>
+  <mat-icon [matBadge]="saloes.length" matBadgeColor="primary">people</mat-icon>
+</div>
+<div fxLayout="row wrap" fxLayout.lt-sm="column">
+  <mat-card fxFlex="20" class="card-usuario" *ngFor="let salao of saloes">
+    <mat-card-header>
+      <mat-card-title>{{salao.nome | titlecase}}</mat-card-title>
+      <mat-card-subtitle class="white-icon">{{salao.endereco | uppercase}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      O Salão {{salao.nome}} tem o dono {{salao.dono}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/editasalao', salao.nome]">
+        <mat-icon class="white-icon">edit</mat-icon>
+      </button>
+      <button mat-button (click)="excluir(salao)">
+        <mat-icon class="white-icon">delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

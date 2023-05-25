@@ -1,0 +1,15 @@
+{
+	"saloes":[
+		{"id": 1,
+		"nome": "Ná Regua",
+		"endereço": "rua Coronel tal",
+		"dono": "lucas"
+		},
+		{"id": 2,
+		"nome": "Lucas lima",
+		"endereço": "rua José de tal",
+		"dono": "Lucas"
+		}
+	],
+	"mensagem":[
+	]}
